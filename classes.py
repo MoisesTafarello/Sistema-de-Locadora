@@ -4,6 +4,20 @@ class Item:
         self.titulo = titulo
         self.disponivel = True
 
+    # Getters
+    def get_codigo(self):
+        return self.codigo
+
+    def get_titulo(self):
+        return self.titulo
+
+    def get_disponivel(self):
+        return self.disponivel
+
+    # Setter
+    def set_disponivel(self, valor):
+        self.disponivel = valor
+
     def alugar(self):
         if self.disponivel:
             self.disponivel = False
@@ -18,11 +32,20 @@ class Item:
         else:
             print(f"{self.titulo} já está disponível!")
 
+
 class Filme(Item):
     def __init__(self, codigo, titulo, genero, duracao):
         Item.__init__(self, codigo, titulo)
         self.genero = genero
         self.duracao = duracao
+
+
+    def get_genero(self):
+        return self.genero
+
+    def get_duracao(self):
+        return self.duracao
+
 
 class Jogo(Item):
     def __init__(self, codigo, titulo, plataforma, faixa_etaria):
@@ -30,11 +53,29 @@ class Jogo(Item):
         self.plataforma = plataforma
         self.faixa_etaria = faixa_etaria
 
+
+    def get_plataforma(self):
+        return self.plataforma
+
+    def get_faixa_etaria(self):
+        return self.faixa_etaria
+
+
 class Cliente:
     def __init__(self, nome, cpf):
         self.nome = nome
         self.cpf = cpf
         self.itens_locados = []
+
+    
+    def get_nome(self):
+        return self.nome
+
+    def get_cpf(self):
+        return self.cpf
+
+    def get_itens_locados(self):
+        return self.itens_locados
 
     def locar(self, item):
         if item.disponivel:
@@ -58,10 +99,18 @@ class Cliente:
         else:
             print(f"{self.nome} não possui itens locados no momento!")
 
+
 class Locadora:
     def __init__(self):
         self.clientes = []
         self.itens = []
+
+    
+    def get_clientes(self):
+        return self.clientes
+
+    def get_itens(self):
+        return self.itens
 
     def cadastrar_cliente(self, cliente):
         self.clientes.append(cliente)

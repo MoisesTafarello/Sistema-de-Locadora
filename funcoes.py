@@ -54,7 +54,8 @@ def devolver_item(locadora):
     locadora.listar_clientes()
     a = int(input("Escolha o número do cliente: ")) - 1
     cliente = locadora.clientes[a]
-
+    print ()
+    
     cliente.listar_itens()
     if not cliente.itens_locados:
         return
