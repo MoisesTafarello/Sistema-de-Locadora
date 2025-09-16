@@ -4,7 +4,7 @@ class Item:
         self.titulo = titulo
         self.disponivel = True
 
-    # Getters
+    
     def get_codigo(self):
         return self.codigo
 
@@ -14,7 +14,7 @@ class Item:
     def get_disponivel(self):
         return self.disponivel
 
-    # Setter
+    
     def set_disponivel(self, valor):
         self.disponivel = valor
 
