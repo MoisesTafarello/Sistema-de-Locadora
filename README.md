@@ -125,7 +125,7 @@ Devolução: Cliente devolve item, que é removido da lista e marcado como dispo
 
 Menu interativo: Todas as ações são realizadas através do menu, tornando o uso intuitivo e controlado.
 
-4️⃣ Conclusão ✅
+4️⃣ Conclusão
 
 O Sistema de Locadora de Filmes e Jogos demonstra a aplicação prática de POO em Python, utilizando conceitos como herança, encapsulamento e modularidade.
 
